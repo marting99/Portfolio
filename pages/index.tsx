@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { createGlobalStyle } from 'styled-components'
 import {Nav} from '../components/nav/nav'
-// import { About } from '@/components/about/about'
+import { About } from '@/components/about/about'
 import React, { useRef, useState } from 'react'
 const GlobalStyles = createGlobalStyle`
   body {
@@ -37,7 +37,7 @@ export default function Home() {
       <main >
       <GlobalStyles />
       <Nav open={open} setOpen={()=>setOpen(!open)} pageName='Home' handleClick={handleClick}/>
-      {/* <About about={about} imgAlt={`image of me Martin Garcia`}></About> */}
+      <About about={about} imgAlt={`image of me Martin Garcia`}></About>
 
       </main>
     </>
