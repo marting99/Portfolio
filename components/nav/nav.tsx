@@ -4,18 +4,29 @@ import {AiOutlineMenu,AiOutlineClose} from 'react-icons/ai';
 
 type props = {
     pageName?:string;
-    handleClick?:(e: React.MouseEvent<Element, MouseEvent>) => void;
+    handleClick?:(event: React.MouseEvent<HTMLAnchorElement>) => void;
     open?:boolean;
     setOpen?:React.Dispatch<React.SetStateAction<boolean>>
 }
 const Navbar = styled.div`
     display:flex;
+    top:0;
+    position:sticky;
+    height:60px;
+    z-index:1;
     justify-content:space-between;
     align-items:center;
-    background-color:#7c9381;
+    color:black;
+    background-color:white;
+    box-shadow: 0px 7px 13px -1px #111;
+    padding:0 20px;
+    h1{
+        margin:0;
+    }
     .content{
         display:flex;
         justify-content:center;
+        font-size:24px;
     }
     .content .close{
         display:none;
@@ -23,10 +34,10 @@ const Navbar = styled.div`
     .content .open{
         display:none;
     }
-    .content div{
+    .content a{
         margin:0px 10px;
     }
-    .content div:hover{
+    .content a:hover{
         cursor:pointer;
     }
     @media(max-width:700px){
@@ -87,12 +98,12 @@ export const Nav:React.FC<props>=({handleClick,setOpen,open})=>{
         <>
         <Navbar>
             <div className='logo' >
-                <h1>Martin Garcia</h1>
+                <h1>Martín Garcia</h1>
             </div>
             <div className="content">
-                <div className='' onClick={(e)=>handleClick?.(e)}>About</div>
-                <div className=''  onClick={(e)=>handleClick?.(e)}>Projects</div>
-                <div className='' onClick={(e)=>handleClick?.(e)}>Contact</div>
+                <a onClick={handleClick}>About</a>
+                <a  onClick={handleClick}>Projects</a>
+                <a onClick={handleClick}>Contact</a>
             </div>
         </Navbar>
         <MobileNav>
@@ -100,9 +111,9 @@ export const Nav:React.FC<props>=({handleClick,setOpen,open})=>{
                 <AiOutlineMenu/>
             </button>
                 <ul className={`${isOpen?'show':'hide'}`} >
-                    <div className='link' onClick={(e)=>handleClick?.(e)}>About</div>
-                    <div className='link'  onClick={(e)=>handleClick?.(e)}>Projects</div>
-                    <div className='link' onClick={(e)=>handleClick?.(e)}>Contact</div>
+                    <a className='link' onClick={handleClick}>About</a>
+                    <a className='link'  onClick={handleClick}>Projects</a>
+                    <a className='link' onClick={handleClick}>Contact</a>
                     <div >
                         <button onClick={()=>setIsOpen(!isOpen)} className='closed'><AiOutlineClose/></button>
                     </div>
