@@ -4,9 +4,10 @@ import { createGlobalStyle } from 'styled-components'
 import {Nav} from '../components/nav/nav'
 import { About } from '@/components/about/about'
 import React, { useRef, useState } from 'react'
+import Hero from '../components/header/header'
 const GlobalStyles = createGlobalStyle`
   body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Graphik', sans-serif;
     margin: 0;
     color: white;
     padding: 0;
@@ -37,6 +38,7 @@ export default function Home() {
       <main >
       <GlobalStyles />
       <Nav open={open} setOpen={()=>setOpen(!open)} pageName='Home' handleClick={handleClick}/>
+      <Hero/>
       <About about={about} imgAlt={`image of me Martin Garcia`}></About>
 
       </main>
