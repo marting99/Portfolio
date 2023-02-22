@@ -35,7 +35,7 @@ export const Card:React.FC<cardProps>=({imageSrc,skills})=>{
             setAngle({ x: -degree / 10, y: -degree / 10 });
           } else if ((x >= centerX && y < centerY)||(x >= centerX && y >= centerY)) {
             // top & bottom right
-            setAngle({ x: (-degree*2) / 10, y: (degree*2) / 10 });
+            setAngle({ x: (-degree*3) / 10, y: (degree*3) / 10 });
             
         }
     };
