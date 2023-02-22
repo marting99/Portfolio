@@ -44,7 +44,7 @@ export default function Hero(){
         <>
             <Main>
                 <div className='text'>
-                    <h1>Hello I&apos;m Martín! My eagerness to learn and commitment to staying up-to-date with the latest industry trends and tools is evident in my work. With me on your team, you can rest assured that your project is in good hands and will receive the attention and expertise it deserves.</h1>
+                    <h1>Hello, my name is Martín! My eagerness to learn and dedication to staying current with industry trends and tools are evident in my work. With me on your team, you can be confident that your project will receive the attention and expertise it deserves.</h1>
                 </div>
                 <div className='c'>
                     <span>Get in touch</span>
@@ -53,3 +53,4 @@ export default function Hero(){
         </>
     )
 }
+
