@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import imgMe from '../public/me.jpg'
 import { createGlobalStyle } from 'styled-components'
 import {Nav} from '../components/nav/nav'
 import { About } from '@/components/about/about'
 import React, { useRef, useState } from 'react'
 import Hero from '../components/header/header'
+import { Card } from '@/components/card/card'
 const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Graphik', sans-serif;
@@ -34,12 +35,15 @@ export default function Home() {
     <>
       <Head>
         <title>Martin Garcia Dev</title>
+        <link rel="icon" href={imgMe.src} />
       </Head>
       <main >
       <GlobalStyles />
       <Nav open={open} setOpen={()=>setOpen(!open)} pageName='Home' handleClick={handleClick}/>
       <Hero/>
+      <Card imageSrc={imgMe.src}/>
       <About about={about} imgAlt={`image of me Martin Garcia`}></About>
+
 
       </main>
     </>
