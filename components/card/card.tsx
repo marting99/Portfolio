@@ -43,23 +43,37 @@ export const Card:React.FC<cardProps>=({imageSrc,skills})=>{
         setAngle({ x: 0, y: 0 });
       };
     return(
-        <CardStyle xAngle={angle.x} yAngle={angle.y} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+        <CardStyle xAngle={angle.x} yAngle={angle.y} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} clicked={clicked} onClick={()=>setClicked(!clicked)}>
                 <>
-                <div className="jobTitle">
-                    <h2>Junior Dev</h2>
-                </div>
-                <div className="circle">
-                    <div className='image'>
-                        <Image src={imageSrc} layout="fill" className="nextImg" alt={``}/>
+                <div className="card">
+                    <div className="face front">
+                        <div className="jobTitle">
+                            <h2>Junior Dev</h2>
+                        </div>
+                        <div className="circle">
+                            <div className='image'>
+                                <Image src={imageSrc} layout="fill" className="nextImg" alt={``}/>
+                            </div>
+                        </div>
+                        <div className="text">
+                            <h3>Test</h3>
+                            <p>test</p>
+                            <p>test</p>
+                            <p>test</p>
+                            <p>test</p>
+                        </div>
+
+                    </div>
+                    <div className="face back">
+                            <h4>Backside</h4>
                     </div>
                 </div>
-                <div className="text">
-                    <h3>Test</h3>
+                    
+                {/* <div className={`back ${clicked?`showBack`:``}`}>
                     <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                    <p>test</p>
-                </div>
+
+                </div> */}
+                
             </>
             
         </CardStyle>
