@@ -38,11 +38,14 @@ export const About:React.FC<IDivPosition>=({imgAlt,about})=>{
         <Overlay ref={about}>
 
                 <div className='left'>
-                    <div className='img'>
+                    <div className="img">
                         <Image
                             src={imgMe.src}
+                            className="nextImg"
                             layout="fill"
-                            objectFit='cover'
+                            sizes="(max-width: 768px) 100vw,
+                                    (max-width: 1200px) 50vw,
+                                    33vw"
                             blurDataURL={imgMe.src}
                             placeholder="blur"
                             alt={imgAlt}
