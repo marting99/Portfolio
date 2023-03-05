@@ -1,6 +1,4 @@
-import styled from 'styled-components'
-
-
+import styled,{keyframes} from 'styled-components'
 
 export const Main=styled.div`
 background-color:#202E2C;
@@ -33,14 +31,6 @@ h1{
     font-size:28px;
     cursor:pointer;
 }
-.hero-image{
-    width:40%;
-    min-height:80vh;
-    position:relative;
-  }
-  .nextImg{
-    object-fit:cover;
-  }
 .other-contact{
     display:flex;
     width:50%;
@@ -54,7 +44,71 @@ h1{
 .other-contact .linked-in{
     margin: 0px 10%;
 }
-span{
+.email span{
     border-bottom:2px solid;
+    vertical-align:sub;
 }
+`;
+
+const slideInLeft = keyframes`
+from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+const slideInBottom = keyframes`
+from {
+    transform:translateY(100%);
+    opacity:0;
+}
+to{
+    transform:translateY(0);
+    opactiy:1;
+}
+`;
+const slideInRight = keyframes`
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+export const LeftText = styled.p`
+    margin:0;
+    animation: ${slideInLeft} 1s ease-in-out;
+`;
+export const LeftText2 = styled.p`
+    margin:0;
+    animation:${slideInLeft} 1.3s ease-in-out;
+`;
+export const BottomText = styled.div`
+    margin:0;
+    display:flex;
+    width:100%;
+    animation:${slideInBottom} 1s ease-in-out;
+`;
+export const RightImage = styled.div`
+    margin:0;
+    animation:${slideInRight} 1s ease-in-out;
+    height:80vh;
+    width:40%;
+    .hero-image{
+        width:100%;
+        min-height:80vh;
+        position:relative;
+      }
+      .nextImg{
+        object-fit:cover;
+      }
+    
 `;
