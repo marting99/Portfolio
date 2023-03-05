@@ -36,6 +36,7 @@ export const Card:React.FC<cardProps>=({imageSrc,skills,jobTitle,imageAlt,bullet
                 <>
                 <div className="card" >
                     <div className="face front">
+                        <div className="hole"/>
                         <div className="jobTitle">
                             <h2>{jobTitle}</h2>
                         </div>
@@ -56,6 +57,7 @@ export const Card:React.FC<cardProps>=({imageSrc,skills,jobTitle,imageAlt,bullet
 
                     </div>
                     <div className="face back">
+                    <div className="hole"/>
                         <div className="backText">
                             <h2>Overview</h2>
                             {bulletPoints?.map(item=>

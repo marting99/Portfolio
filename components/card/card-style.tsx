@@ -7,11 +7,9 @@ interface CardProps {
   }
 export const CardWrapper=styled.div`
     perspective: 1000px;
-    width:100%;
     transition: transform 1s ease-in;
     transform-style: preserve-3d;
     display:flex;
-    padding-left:2%;
     *{
       backface-visibility: hidden;
     }
@@ -24,8 +22,10 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
     margin-top:1%;
     perspective: 1000px;
     height:87vh;
+    wdith:90%;
     .card{
-      width:455px;
+      min-width:455px;
+      min-height:87vh;
       position:relative;
       transition: transform 0.2s ease-out;
       transform-style: preserve-3d;
@@ -35,6 +35,7 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
       height:auto;
       width:91%;
       color:#FFF;
+      filter:drop-shadow(0px 10px 8px black);
       padding:20px;
       position:absolute;
       left:${props=>props.clicked?'10%':''};
@@ -52,13 +53,21 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
     .back {
       background-color:#202E2C;
       transform: rotateY(180deg);
-      height:87vh;
     }
     *{
       backface-visibility: hidden;
     }
     :hover{
       cursor:pointer;
+    }
+    .hole{
+      border-radius: 12px;
+      display: flex;
+      margin: auto;
+      width: 47px;
+      height: 12px;
+      box-shadow: black 2px 3px 6px 2px inset;
+      background-color: white;
     }
     .jobTitle h2{
       max-width:70%;
@@ -70,8 +79,8 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
       margin:auto;
     }
     .image{
-      width:200px;
-      height:200px;
+      width:175px;
+      height:175px;
       border-radius:50%;
       border:2px solid white;
       z-index:1;
