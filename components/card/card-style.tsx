@@ -22,7 +22,7 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
     margin-top:1%;
     perspective: 1000px;
     height:87vh;
-    wdith:90%;
+    width:90%;
     .card{
       min-width:455px;
       min-height:87vh;
@@ -105,7 +105,12 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
     }
     .backText li{
       padding: 5% 0px;
+    }
 
+    @media(max-width:780px){
+      .card{
+        min-width:350px;
+      }
     }
 
 `

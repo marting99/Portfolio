@@ -48,6 +48,16 @@ h1{
     border-bottom:2px solid;
     vertical-align:sub;
 }
+@media(max-width:780px){
+    flex-direction:column-reverse;
+    height:auto;
+    align-items:center;
+    line-height:1.5;
+    .content{
+        width:100%;
+        padding:0;
+    }
+}
 `;
 
 const slideInLeft = keyframes`
@@ -108,7 +118,15 @@ export const RightImage = styled.div`
         position:relative;
       }
       .nextImg{
-        object-fit:cover;
+        object-fit:contain;
       }
+
+    @media(max-width:780px){
+        height:auto;
+        width:100%;
+        .hero-image{
+            min-height:365px;
+        }
+    }
     
 `;
