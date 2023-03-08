@@ -38,7 +38,7 @@ export default function Hero(){
                                     </Link>
                                 </div>
                                 <div className="linked-in">
-                                    <Link href="https://www.linkedin.com/in/martin-garcia-92a804202/">
+                                    <Link href="https://www.linkedin.com/in/martin-garcia-92a804202/" target={"_blank"} passHref>
                                         <AiFillLinkedin style={{color:'white'}}/>
                                     </Link>
                                 </div>
