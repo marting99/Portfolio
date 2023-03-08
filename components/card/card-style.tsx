@@ -10,8 +10,15 @@ export const CardWrapper=styled.div`
     transition: transform 1s ease-in;
     transform-style: preserve-3d;
     display:flex;
+    margin:5% 0;
+    align-items:center;
+    justify-content:center;
     *{
       backface-visibility: hidden;
+    }
+    @media(max-width:700px){
+      width:100%;
+      transitio:none;
     }
 `;
 export const CardStyle=styled.div.attrs<CardProps>( props => ({
@@ -19,20 +26,21 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
       transform: `rotateX(${props.xAngle *-10}deg) rotateY(${props.yAngle*10}deg)`
     }
   }))<CardProps>`
-    margin-top:1%;
     perspective: 1000px;
-    height:87vh;
-    width:90%;
+    height:550px;
+    // width:30%;
+    
     .card{
       min-width:455px;
-      min-height:87vh;
       position:relative;
+      height:575px;
+
       transition: transform 0.2s ease-out;
       transform-style: preserve-3d;
       transform:${props=> props.clicked?'rotateY(180deg)':''}
     }
     .face{
-      height:auto;
+      height:575px;
       width:91%;
       color:#FFF;
       filter:drop-shadow(0px 10px 8px black);
@@ -106,11 +114,31 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
     .backText li{
       padding: 5% 0px;
     }
-
-    @media(max-width:780px){
-      .card{
-        min-width:350px;
-      }
+`
+export const MobileCard = styled.div`
+    width:100%;
+    color:#202E2C;
+    display:flex;
+    .circle{
+      border-radius:50%;
+      margin:auto;
     }
-
+    .left{
+      width:50%;
+    }
+    .right{
+      width:50%;
+    }
+    .image{
+      width:175px;
+      height:175px;
+      border-radius:50%;
+      border:2px solid white;
+      z-index:1;
+      overflow:hidden;
+      position:relative;
+    }
+    .nextImg{
+      object-fit:cover;
+    }
 `

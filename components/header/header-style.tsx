@@ -92,6 +92,18 @@ const slideInRight = keyframes`
     opacity: 1;
   }
 `;
+const mobileSlide = keyframes`
+from {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+`
 
 export const LeftText = styled.p`
     margin:0;
@@ -109,7 +121,7 @@ export const BottomText = styled.div`
 `;
 export const RightImage = styled.div`
     margin:0;
-    animation:${slideInRight} 1s ease-in-out;
+    // animation:${slideInRight} 1s ease-in-out;
     height:80vh;
     width:40%;
     .hero-image{
@@ -123,9 +135,11 @@ export const RightImage = styled.div`
 
     @media(max-width:780px){
         height:auto;
-        width:100%;
+        animation:${mobileSlide} 1s ease-in-out;
+        width:80%;
         .hero-image{
             min-height:365px;
+            width:100%;
         }
     }
     
