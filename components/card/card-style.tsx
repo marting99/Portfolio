@@ -16,7 +16,7 @@ export const CardWrapper=styled.div`
     *{
       backface-visibility: hidden;
     }
-    @media(max-width:700px){
+    @media(max-width:900px){
       width:100%;
       transitio:none;
     }
@@ -114,8 +114,13 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
     .backText li{
       padding: 5% 0px;
     }
+    @media(max-width:900px){
+      display:none;
+    }
 `
 export const MobileCard = styled.div`
+  display:none;
+  @media(max-width:900px){
     width:100%;
     color:#202E2C;
     display:flex;
@@ -141,4 +146,6 @@ export const MobileCard = styled.div`
     .nextImg{
       object-fit:cover;
     }
+  }
+    
 `

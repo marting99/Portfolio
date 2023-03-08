@@ -48,7 +48,7 @@ h1{
     border-bottom:2px solid;
     vertical-align:sub;
 }
-@media(max-width:780px){
+@media(max-width:900px){
     flex-direction:column-reverse;
     height:auto;
     align-items:center;
@@ -133,7 +133,7 @@ export const RightImage = styled.div`
         object-fit:contain;
       }
 
-    @media(max-width:780px){
+    @media(max-width:900px){
         height:auto;
         animation:${mobileSlide} 1s ease-in-out;
         width:80%;

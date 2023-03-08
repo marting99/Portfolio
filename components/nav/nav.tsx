@@ -40,7 +40,7 @@ const Navbar = styled.div`
     .content a:hover{
         cursor:pointer;
     }
-    @media(max-width:700px){
+    @media(max-width:900px){
         display:none;
         button{
             display:none;
@@ -49,7 +49,7 @@ const Navbar = styled.div`
 `;
 const MobileNav = styled.div`
 display:none;
-    @media(max-width:700px){
+    @media(max-width:900px){
         display:flex;
         .hide{
             transform: translateX(-100%);
