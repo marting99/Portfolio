@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import imgMe from '../public/me.jpg';
+import prod from '../public/prod1.png'
 import { createGlobalStyle } from 'styled-components';
 import {Nav} from '../components/nav/nav';
 import { About } from '@/components/about/about';
+import { Project } from '@/components/projects/project';
 import React, { useRef, useState } from 'react';
 import Hero from '../components/header/header';
 import { Card } from '@/components/card/card';
@@ -42,6 +44,7 @@ export default function Home() {
       <GlobalStyles />
       <Nav open={open} setOpen={()=>setOpen(!open)} pageName='Home' handleClick={handleClick}/>
         <Hero/>
+        <Project projectName="test" imageSrc={prod.src} role={'contract'} projectDesc=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, ipsum. Explicabo labore atque, repellendus ipsa quod rerum harum, delectus, accusantium voluptate minima quaerat quia quas perspiciatis molestiae magnam. Alias, totam?"/>
         <Card imageSrc={imgMe.src} 
               imageAlt={`picture of me smiling`} 
               name={`Martín`} 
@@ -55,3 +58,4 @@ export default function Home() {
     </>
   )
 }
+
