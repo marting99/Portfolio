@@ -13,7 +13,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Graphik', sans-serif;
     margin: 0;
     padding: 0;
-    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
     height:100%;
   }
 `
