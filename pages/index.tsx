@@ -8,6 +8,9 @@ import { Project } from '@/components/projects/project';
 import React, { useRef, useState } from 'react';
 import Hero from '../components/header/header';
 import { Card } from '@/components/card/card';
+import ProdPhone from 'public/prod1-phone.png';
+import CatGore from 'public/catgorehair.png';
+import CatGorePhone from 'public/CatGorePhone.png';
 const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Graphik', sans-serif;
@@ -20,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
 `
 export default function Home() {
 
-  const services = useRef<HTMLDivElement>(null);
+  const project = useRef<HTMLDivElement>(null);
   const about = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const reviews = useRef<HTMLDivElement>(null);
@@ -30,7 +33,7 @@ export default function Home() {
   const handleClick = (e:React.MouseEvent<Element,MouseEvent>) => {
     setOpen(!open)
     const target = e.target as Element;
-    if(target.innerHTML=='Projects')services.current?.scrollIntoView({behavior: 'smooth'});
+    if(target.innerHTML=='Projects')project.current?.scrollIntoView({behavior: 'smooth'});
     if(target.innerHTML=='About')about.current?.scrollIntoView({behavior: 'smooth'});
     if(target.innerHTML=='Reviews')reviews.current?.scrollIntoView({behavior: 'smooth'});
 
@@ -45,8 +48,23 @@ export default function Home() {
       <GlobalStyles />
       <Nav open={open} setOpen={()=>setOpen(!open)} pageName='Home' handleClick={handleClick}/>
         <Hero/>
-        <Project projectName="test" imageSrc={prod.src} role={'contract'} projectDesc=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, ipsum. Explicabo labore atque, repellendus ipsa quod rerum harum, delectus, accusantium voluptate minima quaerat quia quas perspiciatis molestiae magnam. Alias, totam?"/>
-        <Card imageSrc={imgMe.src} 
+        <Project 
+          projectName="test" 
+          imageSrc={prod.src}
+          mobileImg={ProdPhone.src} 
+          role={'contract'} 
+          projectDesc=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, ipsum. Explicabo labore atque, repellendus ipsa quod rerum harum, delectus, accusantium voluptate minima quaerat quia quas perspiciatis molestiae magnam. Alias, totam?"
+          project={project}
+        />
+        <Project 
+          projectName="Testing" 
+          imageSrc={CatGore.src}
+          mobileImg={CatGorePhone.src} 
+          role={'contract'} 
+          projectDesc=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, ipsum. Explicabo labore atque, repellendus ipsa quod rerum harum, delectus, accusantium voluptate minima quaerat quia quas perspiciatis molestiae magnam. Alias, totam?"
+        />
+        <Card 
+              imageSrc={imgMe.src} 
               imageAlt={`picture of me smiling`} 
               name={`Martín`} 
               jobTitle={'Junior Developer'} 

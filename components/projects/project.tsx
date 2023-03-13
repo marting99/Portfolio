@@ -2,7 +2,6 @@ import React, {RefObject} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Iphone from '../../public/iphone.png';
-import ProdPhone from 'public/prod1-phone.png';
 import {ProjectWrapper} from './project-style';
 
 type ProjectProps = {
@@ -11,12 +10,15 @@ type ProjectProps = {
     projectName:string;
     role:string;
     projectDesc:string;
+    mobileImg:string;
+    project?: RefObject<HTMLDivElement>|null;
+
 }
 
-export const Project:React.FC<ProjectProps>=({imageSrc,imageAlt,projectName,role,projectDesc})=>{
+export const Project:React.FC<ProjectProps>=({imageSrc,imageAlt,projectName,role,projectDesc,mobileImg,project})=>{
     return (
         <>
-            <ProjectWrapper>
+            <ProjectWrapper ref={project}>
                 <div className="left">
                     <div className="subtitle">
                         <h3>PROJECT</h3>
@@ -40,7 +42,7 @@ export const Project:React.FC<ProjectProps>=({imageSrc,imageAlt,projectName,role
                             <Image src={Iphone.src} layout="fill" className="i-phone" alt={`${imageAlt}`} blurDataURL={Iphone.src}></Image>
                         </div>
                         <div className="prodImg">
-                            <Image src={ProdPhone.src} layout="fill" className="prod-phone" alt={`${imageAlt}`} blurDataURL={Iphone.src}></Image>
+                            <Image src={mobileImg} layout="fill" className="prod-phone" alt={`${imageAlt}`} blurDataURL={Iphone.src}></Image>
 
                         </div>
                     </div>

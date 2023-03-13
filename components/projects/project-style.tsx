@@ -2,17 +2,16 @@ import styled from 'styled-components';
 
 export const ProjectWrapper=styled.div`
 display:flex;
-justify-content:space-evenly;
-margin:0 22px;
+justify-content:space-between;
+margin:0 50px;
 padding: 100px 0px;
-border-bottom:3px solid gray;
+border-bottom:1px solid #333;
 .left{
     max-width:36%;
 }
 .subtitle{
     font-size:14px;
     max-width:65%;
-    // line-height:65px;
 }
 .title{
 }
@@ -70,7 +69,7 @@ border-bottom:3px solid gray;
     overflow:hidden;
 }
 .nextImg{
-    object-fit:cover;
+    object-fit:fill;
   }
   .prodImg{
     position:absolute;
@@ -78,18 +77,36 @@ border-bottom:3px solid gray;
     top:6%;
     left:11%;
     height:310px;
+    border-radius:16px;
     box-shadow:0px 23px 25px -15px black;
   }
   .prod-phone{
-    object-fit:cover;
+    object-fit:fill;
     border-radius:16px;
     
   }
-//   @media(min-width:1700px){
-//     .phone{
-//         right:75%;
-//     }
-//   }
+  @media(max-width:900px){
+    flex-direction:column-reverse;
+    padding:50px 0px;
+    margin: 0 25px;
+    .right{
+        width:100%;
+    }
+    .desktop{
+        height:225px;
+    }
+    .phone{
+        display:none;
+    }
+    .left{
+        width:100%;
+        max-width:100%;
+
+    }
+    .text{
+        max-width:100%;
+    }
+  }
 //   @media(min-width:2200px){
 //     .phone{
 //         right:55em;
