@@ -13,7 +13,7 @@ const Navbar = styled.div`
     top:0;
     position:sticky;
     height:60px;
-    z-index:1;
+    z-index:10;
     justify-content:space-between;
     align-items:center;
     color:black;

@@ -121,7 +121,7 @@ export const BottomText = styled.div`
 `;
 export const RightImage = styled.div`
     margin:0;
-    // animation:${slideInRight} 1s ease-in-out;
+    animation:${slideInRight} 1s ease-in-out;
     height:80vh;
     width:40%;
     .hero-image{
