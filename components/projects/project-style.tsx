@@ -11,25 +11,33 @@ border-bottom:1px solid #333;
 }
 .subtitle{
     font-size:14px;
+    opacity: 0;
+    animation: drop 0.4s linear forwards;
     max-width:65%;
 }
 .title{
+    // animation: drop 0.4s linear forwards 0.2s;
 }
 .title h1{
     font-size:55px;
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.2s;
     line-height:65px;
 }
 .title h3{
     font-size:16px;
+    opacity: 0;
     line-height:24px;
     font-weight:500;
+    animation: drop 0.4s linear forwards 0.4s;
     
 }
 .text{
-    max-width:65%;
     color:#333;
-    font-size:18px;
+    font-size:20px;
+    opacity: 0;
     line-height:30px;
+    animation: drop 0.4s linear forwards 0.6s;
 }
 .right{
     width:57.7%;
@@ -84,6 +92,28 @@ border-bottom:1px solid #333;
     object-fit:fill;
     border-radius:16px;
     
+  }
+  @keyframes drop{
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    65% {
+        transform: translateY(-17px);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-22px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
   }
   @media(max-width:900px){
     flex-direction:column-reverse;
