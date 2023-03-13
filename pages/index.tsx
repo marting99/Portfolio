@@ -10,7 +10,7 @@ import Hero from '../components/header/header';
 import { Card } from '@/components/card/card';
 import ProdPhone from 'public/prod1-phone.png';
 import CatGore from 'public/catgorehair.png';
-import CatGorePhone from 'public/CatGorePhone.png';
+import CatGorePhone from 'public/catgorephone.png';
 const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Graphik', sans-serif;
