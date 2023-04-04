@@ -52,10 +52,19 @@ h1{
     flex-direction:column-reverse;
     height:auto;
     align-items:center;
+    // padding: 0px 40px;
     line-height:1.5;
     .content{
-        width:100%;
+        width:80%;
         padding:0;
+    }
+    .other-contact{
+        padding:10px 0;
+        margin: 0;
+        width:100%;
+    }
+    .other-contact .github{
+        margin:0;
     }
 }
 `;
@@ -118,6 +127,9 @@ export const BottomText = styled.div`
     display:flex;
     width:100%;
     animation:${slideInBottom} 1s ease-in-out;
+    @media(max-width:900px){
+        flex-direction:column;
+    }
 `;
 export const RightImage = styled.div`
     margin:0;
