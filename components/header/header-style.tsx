@@ -1,19 +1,12 @@
 import styled,{keyframes} from 'styled-components'
 
 export const Main=styled.div`
-background-color:#202E2C;
-color:white;
-display:flex;
-justify-content:space-around;
-line-height:2;
-height:80vh;
 padding: 4% 0;
 width:100%;
 .content{
     display:flex;
     justify-content:center;
     flex-direction:column;
-    width:40%;
     padding:0px 5%;
 }
 .text{
@@ -25,6 +18,7 @@ h1{
 }
 .contact{
     display:flex;
+    width:100%;
 }
 .email{
     width:max-content;
@@ -33,7 +27,6 @@ h1{
 }
 .other-contact{
     display:flex;
-    width:50%;
     margin-left:5%;
     align-items:center;
     font-size:44px;
@@ -125,6 +118,7 @@ export const LeftText2 = styled.p`
 export const BottomText = styled.div`
     margin:0;
     display:flex;
+    justify-content:center;
     width:100%;
     animation:${slideInBottom} 1s ease-in-out;
     @media(max-width:900px){

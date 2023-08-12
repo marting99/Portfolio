@@ -42,24 +42,24 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
     .face{
       height:575px;
       width:91%;
-      color:#FFF;
+      color:white;
       filter:drop-shadow(0px 10px 8px black);
       padding:20px;
       position:absolute;
       left:${props=>props.clicked?'10%':''};
       box-sizing: border-box;
-      border: 10px solid #202E2C;
-      box-shadow: 0px 0px 0px 2px rgb(255, 255, 255) inset;
+      border: 5px solid white;
+      box-shadow: 0px 0px 0px 2px #202E2C inset;
       border-radius:12px;
       backface-visibility:hidden;
     }
     .front{
       display:flex;
       flex-direction:column;
-      background-color:#202E2C;
+      background-color:black;
     }
     .back {
-      background-color:#202E2C;
+      background-color:black;
       transform: rotateY(180deg);
     }
     *{
@@ -68,6 +68,9 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
     :hover{
       cursor:pointer;
     }
+    .backText h2{
+      text-align:center;
+    }
     .hole{
       border-radius: 12px;
       display: flex;
@@ -75,22 +78,24 @@ export const CardStyle=styled.div.attrs<CardProps>( props => ({
       width: 47px;
       height: 12px;
       box-shadow: black 2px 3px 6px 2px inset;
-      background-color: white;
+      background:white;
     }
     .jobTitle h2{
       max-width:70%;
       letter-spacing:3px;
-      border-bottom:white 1px solid;
+      margin:auto;
+      border-bottom:#202E2C 1px solid;
     }
     .circle{
       border-radius:50%;
+      border:solid white 2px;
       margin:auto;
     }
     .image{
       width:175px;
       height:175px;
       border-radius:50%;
-      border:2px solid white;
+      border:2px solid #202E2C;
       z-index:1;
       overflow:hidden;
       position:relative;
