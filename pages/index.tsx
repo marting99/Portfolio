@@ -66,7 +66,7 @@ export default function Home() {
             projectDesc="I created a clean and user-friendly website for a hairstylist to showcase her services, customer reviews, and provide a booking form for clients. The website features a modern design with a focus on simplicity and ease of use for her clients."
           />
         <About about={about}></About>
-        <Hero></Hero>
+        {/* <Hero></Hero> */}
       </main>
     </>
   )

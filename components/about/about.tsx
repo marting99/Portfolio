@@ -2,7 +2,6 @@ import React,{RefObject} from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import imgMe from '../../public/me.jpg'
-import {Card} from 'components/card/card'
 import { CardWrapper } from '../card/card-style';
 
 interface IDivPosition {
@@ -10,28 +9,46 @@ interface IDivPosition {
 }
 
 const AboutWrapper = styled.div`
-width:100%;
-color:white;
 display:flex;
-justify-content:center;
-align-items:center;
-// background-color:#5c695f;
+justify-content:space-between;
+margin:0 50px;
+padding: 100px 0px;
+flex-direction:column;
+padding: 50px 0px;
+margin: 0px 50px;
 .content{
     width:100%;
     display:flex;
-flex-direction:column;
-
     justify-content:space-around;
+    padding:50px 0px;
 }
-.top{
-    margin-top:36px;
+.title{
 }
-.top h2{
+ h2{
     font-size:50px;
     margin:10px;
     color:black;
-    text-align:center;
 }
+  .image{
+    width:175px;
+    height:175px;
+    border-radius:50%;
+    border:2px solid #202E2C;
+    z-index:1;
+    overflow:hidden;
+    position:relative;
+  }
+  .nextImg{
+    object-fit:cover;
+  }
+  .left{
+    width:45%;
+    padding-left:50px;
+  }
+  .right{
+    width:55%;
+    padding: 0px 70px;
+  }
 
 `;
 
@@ -41,20 +58,16 @@ export const About:React.FC<IDivPosition>=({about})=>{
         <>
         <AboutWrapper ref={about}>
             <div className="content">
-                <div className="top">
-                    <h2>About Me</h2>
+                <div className="left">
+                <h2>About Me</h2>
+                <div className="circle">
+                    <div className='image'>
+                        <Image src={imgMe.src} layout="fill" className="nextImg" alt={`A picture of myself sitting down with a hawaiin shirt`} blurDataURL={imgMe.src}/>
+                    </div>
+                </div>
                 </div>
                 <div className="right">
-                    <Card 
-                    imageSrc={imgMe.src} 
-                    imageAlt={`picture of me smiling`} 
-                    name={`Martín`} 
-                    jobTitle={'Junior Developer'} 
-                    skills={['HTML & CSS', 'Javascript','React', 'Typescript','Python', 'GraphQL', 'Firebase']} 
-                    bulletPoints={['I have a proven track record of successfully completing web development projects, showcasing my dedication and ability to deliver results.',
-                    'I possess a versatile skill set in various programming languages and frameworks that allows me to develop visually appealing and user-friendly websites and applications.',
-                    'With a passion for problem-solving, I provide innovative solutions that meet the unique needs of your business and your customers.']
-                }/>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, neque expedita officia corporis eaque perspiciatis architecto explicabo unde! Beatae officiis explicabo cumque quos facilis sunt ab corrupti facere architecto tenetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quod reprehenderit illo maxime, perferendis doloribus nihil libero adipisci eos exercitationem repellat, veniam sunt et architecto deleniti sint temporibus vel. Quisquam.</p>
                 </div>
 
             </div>
