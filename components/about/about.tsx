@@ -16,6 +16,7 @@ padding: 100px 0px;
 flex-direction:column;
 padding: 50px 0px;
 margin: 0px 50px;
+
 .content{
     width:100%;
     display:flex;
@@ -30,9 +31,8 @@ margin: 0px 50px;
     color:black;
 }
   .image{
-    width:175px;
-    height:175px;
-    border-radius:50%;
+    width:375px;
+    height:375px;
     border:2px solid #202E2C;
     z-index:1;
     overflow:hidden;
@@ -48,6 +48,9 @@ margin: 0px 50px;
   .right{
     width:55%;
     padding: 0px 70px;
+    color:#333;
+    font-size:18px;
+    line-height:40px;
   }
 
 `;
@@ -67,7 +70,7 @@ export const About:React.FC<IDivPosition>=({about})=>{
                 </div>
                 </div>
                 <div className="right">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, neque expedita officia corporis eaque perspiciatis architecto explicabo unde! Beatae officiis explicabo cumque quos facilis sunt ab corrupti facere architecto tenetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quod reprehenderit illo maxime, perferendis doloribus nihil libero adipisci eos exercitationem repellat, veniam sunt et architecto deleniti sint temporibus vel. Quisquam.</p>
+                    <p>Hello, I&apos;m Martin, a forward-thinking tech enthusiast currently pursuing a bachelor&apos;s degree at Cal State University East Bay. My technology journey took an exciting turn when I developed a Google Chrome extension designed to change how users consume online content. This project not only showcased my creativity but also required navigating the intricacies of the Google Chrome store, a challenge that culminated in approval from the Google team. I thrive on crafting innovative solutions, pushing boundaries, and delivering meaningful experiences for users.As I continue my education and professional growth, I&apos;m committed to combining creativity and logic in the ever-evolving landscape of technology.</p>
                 </div>
 
             </div>
