@@ -24,6 +24,7 @@ margin: 0px 50px;
     padding:50px 0px;
 }
 .title{
+    padding-left:50px;
 }
  h2{
     font-size:50px;
@@ -37,6 +38,7 @@ margin: 0px 50px;
     z-index:1;
     overflow:hidden;
     position:relative;
+    border-radius:12px;
   }
   .nextImg{
     object-fit:cover;
@@ -52,6 +54,9 @@ margin: 0px 50px;
     font-size:18px;
     line-height:40px;
   }
+  .right p {
+      margin:0px;
+  }
 
 `;
 
@@ -60,10 +65,11 @@ export const About:React.FC<IDivPosition>=({about})=>{
     return(
         <>
         <AboutWrapper ref={about}>
+            <div className="title"><h2>About Me</h2></div>
             <div className="content">
                 <div className="left">
-                <h2>About Me</h2>
-                <div className="circle">
+                
+                <div >
                     <div className='image'>
                         <Image src={imgMe.src} layout="fill" className="nextImg" alt={`A picture of myself sitting down with a hawaiin shirt`} blurDataURL={imgMe.src}/>
                     </div>

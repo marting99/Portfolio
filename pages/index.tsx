@@ -6,11 +6,10 @@ import {Nav} from '../components/nav/nav';
 import { About } from '@/components/about/about';
 import { Project } from '@/components/projects/project';
 import React, { useRef, useState,useEffect } from 'react';
-import Hero from '../components/header/header';
-import { Card } from '@/components/card/card';
 import ProdPhone from 'public/prod1-phone.png';
 import CatGore from 'public/catgorehair.png';
 import CatGorePhone from 'public/catgorephone.png';
+import Contact from '@/components/contact/contact';
 const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Graphik', sans-serif;
@@ -65,8 +64,9 @@ export default function Home() {
             projectLink="https://catgorehair.com/"
             projectDesc="I created a clean and user-friendly website for a hairstylist to showcase her services, customer reviews, and provide a booking form for clients. The website features a modern design with a focus on simplicity and ease of use for her clients."
           />
+          
         <About about={about}></About>
-        {/* <Hero></Hero> */}
+        <Contact/>
       </main>
     </>
   )
