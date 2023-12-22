@@ -18,9 +18,9 @@ export const Nav:React.FC<props>=({handleClick,setOpen,open})=>{
                 <h1>Martín Garcia</h1>
             </div>
             <div className="content">
-                <a onClick={handleClick}>About</a>
                 <a  onClick={handleClick}>Projects</a>
-                <a onClick={handleClick}>Contact</a>
+                <a onClick={handleClick}>About</a>
+
             </div>
         </Navbar>
         <MobileNav>
@@ -30,7 +30,7 @@ export const Nav:React.FC<props>=({handleClick,setOpen,open})=>{
                 <ul className={`${isOpen?'show':'hide'}`} >
                     <a className='link' onClick={handleClick}>About</a>
                     <a className='link'  onClick={handleClick}>Projects</a>
-                    <a className='link' onClick={handleClick}>Contact</a>
+                    
                     <div >
                         <button onClick={()=>setIsOpen(!isOpen)} className='closed'><AiOutlineClose/></button>
                     </div>

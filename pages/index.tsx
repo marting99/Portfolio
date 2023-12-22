@@ -6,11 +6,10 @@ import {Nav} from '../components/nav/nav';
 import { About } from '@/components/about/about';
 import { Project } from '@/components/projects/project';
 import React, { useRef, useState,useEffect } from 'react';
-import Hero from '../components/header/header';
-import { Card } from '@/components/card/card';
 import ProdPhone from 'public/prod1-phone.png';
 import CatGore from 'public/catgorehair.png';
 import CatGorePhone from 'public/catgorephone.png';
+import Contact from '@/components/contact/contact';
 const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Graphik', sans-serif;
@@ -48,7 +47,6 @@ export default function Home() {
       <main >
       <GlobalStyles />
       <Nav open={open} setOpen={()=>setOpen(!open)} pageName='Home' handleClick={handleClick}/>
-        <Hero/>
           <Project 
             projectName="Francisco Zermeño" 
             imageSrc={prod.src}
@@ -66,16 +64,9 @@ export default function Home() {
             projectLink="https://catgorehair.com/"
             projectDesc="I created a clean and user-friendly website for a hairstylist to showcase her services, customer reviews, and provide a booking form for clients. The website features a modern design with a focus on simplicity and ease of use for her clients."
           />
-        {/* <Card 
-              imageSrc={imgMe.src} 
-              imageAlt={`picture of me smiling`} 
-              name={`Martín`} 
-              jobTitle={'Junior Developer'} 
-              skills={['HTML & CSS', 'Javascript','React', 'Typescript','Python', 'Github', 'Firebase']} 
-              bulletPoints={['I have a proven track record of successfully completing web development projects, showcasing my dedication and ability to deliver results.',
-              'I possess a versatile skill set in various programming languages and frameworks that allows me to develop visually appealing and user-friendly websites and applications.',
-              'With a passion for problem-solving, I provide innovative solutions that meet the unique needs of your business and your customers.']
-          }/> */}
+          
+        <About about={about}></About>
+        <Contact/>
       </main>
     </>
   )
