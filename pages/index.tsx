@@ -70,12 +70,16 @@ export default function Home() {
             projectName="Smoakland" 
             imageSrc={Smoakland.src}
             mobileImg={smkPhone.src} 
-            role={'Full Stack Developer'} 
+            role={'Full Stack Developer (Jan 2021 - May 2022)'} 
             projectLink="https://www.smoakland.com/news"
             projectDesc=" I collaborated closely with the marketing team to create a blog using React and a headless CMS. This approach helped our marketing team to create and publish blogs easily. By implementing this solution, we not only improved our website&apos;s SEO performance but also made it easier for non-technical employees to create unique blog content without my assistance."
           />
           
-        <About about={about}></About>
+        <About 
+        about={about}
+        img = {imgMe.src}
+        imgAlt = "A picture of myself sitting down with a hawaiin shirt" 
+        description="Hello, I&apos;m Martin, a forward-thinking tech enthusiast currently pursuing a bachelor&apos;s degree at Cal State University East Bay. My technology journey took an exciting turn when I developed a Google Chrome extension designed to change how users consume online content. This project not only showcased my creativity but also required navigating the intricacies of the Google Chrome store, a challenge that culminated in approval from the Google team. I thrive on crafting innovative solutions, pushing boundaries, and delivering meaningful experiences for users.As I continue my education and professional growth, I&apos;m committed to combining creativity and logic in the ever-evolving landscape of technology."/>
         <Contact/>
       </main>
     </>
