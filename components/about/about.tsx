@@ -1,11 +1,13 @@
 import React,{RefObject} from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
-import imgMe from '../../public/me.jpg'
-import { CardWrapper } from '../card/card-style';
+
 
 interface IDivPosition {
     about: RefObject<HTMLDivElement>|null;
+    img:string;
+    imgAlt:string;
+    description:string;
 }
 
 const AboutWrapper = styled.div`
@@ -60,23 +62,22 @@ margin: 0px 50px;
 
 `;
 
-export const About:React.FC<IDivPosition>=({about})=>{
+export const About:React.FC<IDivPosition>=({about,img,description,imgAlt})=>{
 
     return(
         <>
         <AboutWrapper ref={about}>
-            <div className="title"><h2>About Me</h2></div>
             <div className="content">
                 <div className="left">
                 
                 <div >
                     <div className='image'>
-                        <Image src={imgMe.src} layout="fill" className="nextImg" alt={`A picture of myself sitting down with a hawaiin shirt`} blurDataURL={imgMe.src}/>
+                        <Image src={img} layout="fill" className="nextImg" alt={imgAlt} blurDataURL={img}/>
                     </div>
                 </div>
                 </div>
                 <div className="right">
-                    <p>Hello, I&apos;m Martin, a forward-thinking tech enthusiast currently pursuing a bachelor&apos;s degree at Cal State University East Bay. My technology journey took an exciting turn when I developed a Google Chrome extension designed to change how users consume online content. This project not only showcased my creativity but also required navigating the intricacies of the Google Chrome store, a challenge that culminated in approval from the Google team. I thrive on crafting innovative solutions, pushing boundaries, and delivering meaningful experiences for users.As I continue my education and professional growth, I&apos;m committed to combining creativity and logic in the ever-evolving landscape of technology.</p>
+                    <p>{description}</p>
                 </div>
 
             </div>
