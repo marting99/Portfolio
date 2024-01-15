@@ -9,7 +9,7 @@ import React, { useRef, useState,useEffect } from 'react';
 import ProdPhone from 'public/prod1-phone.png';
 import CatGore from 'public/catgorehair.png';
 import CatGorePhone from 'public/catgorephone.png';
-import Smoakland from 'public/Smoakland.png';
+import Smoakland from 'public/smoakland.png';
 import smkPhone from 'public/smoakland-phone.png';
 import Contact from '@/components/contact/contact';
 const GlobalStyles = createGlobalStyle`
