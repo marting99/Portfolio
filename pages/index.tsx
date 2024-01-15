@@ -9,6 +9,8 @@ import React, { useRef, useState,useEffect } from 'react';
 import ProdPhone from 'public/prod1-phone.png';
 import CatGore from 'public/catgorehair.png';
 import CatGorePhone from 'public/catgorephone.png';
+import Smoakland from 'public/Smoakland.png';
+import smkPhone from 'public/smoakland-phone.png';
 import Contact from '@/components/contact/contact';
 const GlobalStyles = createGlobalStyle`
   body {
@@ -54,7 +56,7 @@ export default function Home() {
             role={'contract'}
             projectDesc="I worked with Mr.Zermeño to redesign and develop his website, making it mobile responsive, userfriendly, and including a custom blog built with a headless CMS."
             project={project}
-            projectLink="https://zermeno.vercel.app/"
+            projectLink="https://xn--zermeo-0wa.info"
           />
           <Project 
             projectName="Cat Gore Hair" 
@@ -63,6 +65,14 @@ export default function Home() {
             role={'contract'} 
             projectLink="https://catgorehair.com/"
             projectDesc="I created a clean and user-friendly website for a hairstylist to showcase her services, customer reviews, and provide a booking form for clients. The website features a modern design with a focus on simplicity and ease of use for her clients."
+          />
+          <Project 
+            projectName="Smoakland" 
+            imageSrc={Smoakland.src}
+            mobileImg={smkPhone.src} 
+            role={'Full Stack Developer'} 
+            projectLink="https://www.smoakland.com/news"
+            projectDesc=" I collaborated closely with the marketing team to create a blog using React and a headless CMS. This approach helped our marketing team to create and publish blogs easily. By implementing this solution, we not only improved our website&apos;s SEO performance but also made it easier for non-technical employees to create unique blog content without my assistance."
           />
           
         <About about={about}></About>
