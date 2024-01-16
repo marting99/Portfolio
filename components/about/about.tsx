@@ -72,7 +72,7 @@ export const About:React.FC<IDivPosition>=({about,img,description,imgAlt})=>{
                 
                 <div >
                     <div className='image'>
-                        <Image src={img} layout="fill" className="nextImg" alt={imgAlt} blurDataURL={img}/>
+                        <Image src={img} layout="fill"  className="nextImg" alt={imgAlt} loading="lazy" blurDataURL={img}/>
                     </div>
                 </div>
                 </div>

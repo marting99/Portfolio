@@ -1,7 +1,7 @@
 import React, {RefObject,useRef, useState,useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Iphone from '../../public/iphone.png';
+import Iphone from '../../public/iphone.webp';
 import {ProjectWrapper} from './project-style';
 
 type ProjectProps = {
@@ -65,17 +65,17 @@ export const Project:React.FC<ProjectProps>=({imageSrc,imageAlt,projectName,role
                             <div className="desktop">
                             <Link href={`${projectLink}`} passHref target={'_blank'}>
                                 <div className="deskImg">
-                                    <Image src={imageSrc} layout="fill" className="nextImg" alt={`${imageAlt}`} blurDataURL={imageSrc}></Image>
+                                    <Image src={imageSrc} layout="fill" className="nextImg" alt={`${imageAlt}`} blurDataURL={imageSrc} loading="lazy" ></Image>
                                 </div>
                                 </Link>
                             </div>
                         
                         <div className="phone">
                             <div className="phoneImg">
-                                <Image src={Iphone.src} layout="fill" className="i-phone" alt={`${imageAlt}`} blurDataURL={Iphone.src}></Image>
+                                <Image src={Iphone.src} layout="fill" className="i-phone" alt={`${imageAlt}`} blurDataURL={Iphone.src} loading="lazy"></Image>
                             </div>
                             <div className="prodImg">
-                                <Image src={mobileImg} layout="fill" className="prod-phone" alt={`${imageAlt}`} blurDataURL={Iphone.src}></Image>
+                                <Image src={mobileImg} layout="fill" className="prod-phone" alt={`${imageAlt}`} blurDataURL={Iphone.src} loading="lazy"></Image>
 
                             </div>
                         </div>

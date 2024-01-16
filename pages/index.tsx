@@ -1,16 +1,16 @@
 import Head from 'next/head';
-import imgMe from '../public/me.jpg';
-import prod from '../public/prod1.png'
+import imgMe from '../public/me.webp';
+import prod from '../public/prod1.webp'
 import { createGlobalStyle } from 'styled-components';
 import {Nav} from '../components/nav/nav';
 import { About } from '@/components/about/about';
 import { Project } from '@/components/projects/project';
 import React, { useRef, useState,useEffect } from 'react';
-import ProdPhone from 'public/prod1-phone.png';
-import CatGore from 'public/catgorehair.png';
-import CatGorePhone from 'public/catgorephone.png';
-import Smoakland from 'public/smoakland.png';
-import smkPhone from 'public/smoakland-phone.png';
+import ProdPhone from 'public/prod1-phone.webp';
+import CatGore from 'public/catgorehair.webp';
+import CatGorePhone from 'public/catgorephone.webp';
+import Smoakland from 'public/smoakland.webp';
+import smkPhone from 'public/smoakland-phone.webp';
 import Contact from '@/components/contact/contact';
 const GlobalStyles = createGlobalStyle`
   body {
@@ -49,6 +49,11 @@ export default function Home() {
       <main >
       <GlobalStyles />
       <Nav open={open} setOpen={()=>setOpen(!open)} pageName='Home' handleClick={handleClick}/>
+      {/* <About 
+        about={about}
+        img = {imgMe.src}
+        imgAlt = "A picture of myself sitting down with a hawaiin shirt" 
+        description="Hello, I&apos;m Martin, a forward-thinking tech enthusiast currently pursuing a bachelor&apos;s degree at Cal State University East Bay. My technology journey took an exciting turn when I developed a Google Chrome extension designed to change how users consume online content. This project not only showcased my creativity but also required navigating the intricacies of the Google Chrome store, a challenge that culminated in approval from the Google team. I thrive on crafting innovative solutions, pushing boundaries, and delivering meaningful experiences for users.As I continue my education and professional growth, I&apos;m committed to combining creativity and logic in the ever-evolving landscape of technology."/> */}
           <Project 
             projectName="Francisco Zermeño" 
             imageSrc={prod.src}
