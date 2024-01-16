@@ -9,15 +9,16 @@ type ProjectProps = {
     imageAlt?:string;
     projectName:string;
     role:string;
+    date?:string;
     projectDesc:string;
-    mobileImg:string;
+    mobileImg?:string;
     projectLink:string;
     project?: RefObject<HTMLDivElement>|null;
     containerRef?: RefObject<HTMLDivElement>|null;
 
 }
 
-export const Project:React.FC<ProjectProps>=({imageSrc,imageAlt,projectName,role,projectDesc,mobileImg,project,projectLink})=>{
+export const Project:React.FC<ProjectProps>=({imageSrc,imageAlt,projectName,role,date,projectDesc,mobileImg,project,projectLink})=>{
     const [isVisible,setIsVisible] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
@@ -53,6 +54,7 @@ export const Project:React.FC<ProjectProps>=({imageSrc,imageAlt,projectName,role
                     <div className="title">
                         <h1>{projectName}</h1>
                         <h3>{role}</h3>
+                        <h3>{date}</h3>
                     </div>
                     <div className="text">
                         {projectDesc}
@@ -70,7 +72,7 @@ export const Project:React.FC<ProjectProps>=({imageSrc,imageAlt,projectName,role
                                 </Link>
                             </div>
                         
-                        <div className="phone">
+                        {mobileImg && <div className="phone">
                             <div className="phoneImg">
                                 <Image src={Iphone.src} layout="fill" className="i-phone" alt={`${imageAlt}`} blurDataURL={Iphone.src}></Image>
                             </div>
@@ -78,7 +80,7 @@ export const Project:React.FC<ProjectProps>=({imageSrc,imageAlt,projectName,role
                                 <Image src={mobileImg} layout="fill" className="prod-phone" alt={`${imageAlt}`} blurDataURL={Iphone.src}></Image>
 
                             </div>
-                        </div>
+                        </div>}
                     </div>
                 
             </ProjectWrapper>

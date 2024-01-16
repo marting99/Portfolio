@@ -59,6 +59,29 @@ margin: 0px 50px;
   .right p {
       margin:0px;
   }
+  @media(max-width:1100px){
+    .right{
+        width:100%;
+        padding:0;
+
+    }
+    .left{
+        padding-left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom:50px;
+      }
+    .content{
+        
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin: 0 25px;
+    }
+
+}
 
 `;
 
@@ -69,12 +92,9 @@ export const About:React.FC<IDivPosition>=({about,img,description,imgAlt})=>{
         <AboutWrapper ref={about}>
             <div className="content">
                 <div className="left">
-                
-                <div >
                     <div className='image'>
                         <Image src={img} layout="fill" className="nextImg" alt={imgAlt} blurDataURL={img}/>
                     </div>
-                </div>
                 </div>
                 <div className="right">
                     <p>{description}</p>

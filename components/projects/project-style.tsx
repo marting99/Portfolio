@@ -17,9 +17,6 @@ border-bottom:1px solid #333;
     animation: drop 0.4s linear forwards;
     max-width:65%;
 }
-.title{
-    // animation: drop 0.4s linear forwards 0.2s;
-}
 .title h1{
     font-size:55px;
     opacity: 0;
@@ -43,6 +40,7 @@ border-bottom:1px solid #333;
 }
 .right{
     width:57.7%;
+    height:465px;
     position:relative;
     display:flex;
     justify-content:center;
@@ -52,7 +50,8 @@ border-bottom:1px solid #333;
     border-radius:16px;
     border:5px solid black;
     width:100%;
-    height:500px;
+    max-height:450px;
+    max-width:700px;
     box-shadow:0px 13px 15px -15px black;
 }
 .deskImg{
@@ -79,7 +78,7 @@ border-bottom:1px solid #333;
     overflow:hidden;
 }
 .nextImg{
-    object-fit:fill;
+    object-fit:cover;
   }
   .prodImg{
     position:absolute;
@@ -118,7 +117,7 @@ border-bottom:1px solid #333;
     }
   }
   @media(max-width:999px){
-    flex-direction:column;
+    flex-direction:column-reverse;
     justify-content:center;
     align-items:center;
     padding:50px 0px;
@@ -129,23 +128,29 @@ border-bottom:1px solid #333;
     }
     .desktop {
         height: 320px;
+        max-width:550px;
     }
     .right{
         width:80%;
+        height:350px;
     }
     .phone{
         display:none;
     }
   }
+//   hide phone image from 1100 - 1200
+  @media(min-width:1100px) and (max-width:1200px){
+    .phone{
+        display:none;
+    }
+  }
+
   @media(min-width:1000px) and (max-width:1100px){
-    flex-direction:column;
+    flex-direction:column-reverse;
     justify-content:center;
     align-items:center;
     .right{
         width:73%;
-    }
-    .desktop{
-        height:450px;
     }
     .phone{
         display:none;
@@ -161,9 +166,7 @@ border-bottom:1px solid #333;
     }
   }
   @media(min-width:1500px){
-    .desktop{
-        max-width:839px;
-    }
+
     .phone{
         transform:translateX(-214%);
     }

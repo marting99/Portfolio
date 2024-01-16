@@ -54,6 +54,7 @@ export default function Home() {
             imageSrc={prod.src}
             mobileImg={ProdPhone.src} 
             role={'contract'}
+            date={'(May 2022 - June 2022)'} 
             projectDesc="I worked with Mr.Zermeño to redesign and develop his website, making it mobile responsive, userfriendly, and including a custom blog built with a headless CMS."
             project={project}
             projectLink="https://xn--zermeo-0wa.info"
@@ -62,7 +63,8 @@ export default function Home() {
             projectName="Cat Gore Hair" 
             imageSrc={CatGore.src}
             mobileImg={CatGorePhone.src} 
-            role={'contract'} 
+            role={'contract'}
+            date={'(July 2022 - August 2022)'}  
             projectLink="https://catgorehair.com/"
             projectDesc="I created a clean and user-friendly website for a hairstylist to showcase her services, customer reviews, and provide a booking form for clients. The website features a modern design with a focus on simplicity and ease of use for her clients."
           />
@@ -70,9 +72,17 @@ export default function Home() {
             projectName="Smoakland" 
             imageSrc={Smoakland.src}
             mobileImg={smkPhone.src} 
-            role={'Full Stack Developer (Jan 2021 - May 2022)'} 
+            role={'Full Stack Developer '}
+            date={'(Jan 2021 - May 2022)'} 
             projectLink="https://www.smoakland.com/news"
-            projectDesc=" I collaborated closely with the marketing team to create a blog using React and a headless CMS. This approach helped our marketing team to create and publish blogs easily. By implementing this solution, we not only improved our website&apos;s SEO performance but also made it easier for non-technical employees to create unique blog content without my assistance."
+            projectDesc=" I collaborated closely with the marketing team to create a blog using React and a headless CMS. This approach helped our marketing team to create and publish blogs easily."
+          />
+          <Project 
+            projectName="Bombastic Reading" 
+            imageSrc={Smoakland.src} 
+            role={'Chrome extension'}
+            projectLink="https://chromewebstore.google.com/detail/bombastic-reading/mlpgmjfnkcndmkeoobelnbgnabfpggek?pli=1"
+            projectDesc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et impedit reprehenderit sit dolorem totam optio commodi velit corporis! Vitae vel quasi fuga iusto quis aliquid, libero iure veritatis saepe. Neque."
           />
           
         <About 
