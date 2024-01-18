@@ -1,16 +1,17 @@
 import Head from 'next/head';
-import imgMe from '../public/me.jpg';
-import prod from '../public/prod1.png'
+import imgMe from '../public/me.webp';
+import prod from '../public/prod1.webp';
 import { createGlobalStyle } from 'styled-components';
 import {Nav} from '../components/nav/nav';
 import { About } from '@/components/about/about';
 import { Project } from '@/components/projects/project';
 import React, { useRef, useState,useEffect } from 'react';
-import ProdPhone from 'public/prod1-phone.png';
-import CatGore from 'public/catgorehair.png';
-import CatGorePhone from 'public/catgorephone.png';
-import Smoakland from 'public/smoakland.png';
-import smkPhone from 'public/smoakland-phone.png';
+import ProdPhone from 'public/prod1-phone.webp';
+import CatGore from 'public/catgorehair.webp';
+import CatGorePhone from 'public/catgorephone.webp';
+import Smoakland from 'public/smoakland.webp';
+import smkPhone from 'public/smoakland-phone.webp';
+import bombastic from 'public/bombasticReading.webp';
 import Contact from '@/components/contact/contact';
 const GlobalStyles = createGlobalStyle`
   body {
@@ -74,12 +75,12 @@ export default function Home() {
             mobileImg={smkPhone.src} 
             role={'Full Stack Developer '}
             date={'(Jan 2021 - May 2022)'} 
-            projectLink="https://www.smoakland.com/news"
-            projectDesc=" I collaborated closely with the marketing team to create a blog using React and a headless CMS. This approach helped our marketing team to create and publish blogs easily."
+            projectLink="https://www.smoakland.com/dispensary-weed-delivery"
+            projectDesc=" I collaborated closely with the marketing team to create a template for blogs and locations we deliver to using React and a headless CMS. This approach helped our marketing team to create and publish blogs easily."
           />
           <Project 
             projectName="Bombastic Reading" 
-            imageSrc={Smoakland.src} 
+            imageSrc={bombastic.src} 
             role={'Chrome extension'}
             projectLink="https://chromewebstore.google.com/detail/bombastic-reading/mlpgmjfnkcndmkeoobelnbgnabfpggek?pli=1"
             projectDesc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et impedit reprehenderit sit dolorem totam optio commodi velit corporis! Vitae vel quasi fuga iusto quis aliquid, libero iure veritatis saepe. Neque."
@@ -89,7 +90,7 @@ export default function Home() {
         about={about}
         img = {imgMe.src}
         imgAlt = "A picture of myself sitting down with a hawaiin shirt" 
-        description="Hello, I&apos;m Martin, a forward-thinking tech enthusiast currently pursuing a bachelor&apos;s degree at Cal State University East Bay. My technology journey took an exciting turn when I developed a Google Chrome extension designed to change how users consume online content. This project not only showcased my creativity but also required navigating the intricacies of the Google Chrome store, a challenge that culminated in approval from the Google team. I thrive on crafting innovative solutions, pushing boundaries, and delivering meaningful experiences for users.As I continue my education and professional growth, I&apos;m committed to combining creativity and logic in the ever-evolving landscape of technology."/>
+        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et impedit reprehenderit sit dolorem totam optio commodi velit corporis! Vitae vel quasi fuga iusto quis aliquid, libero iure veritatis saepe. Neque."/>
         <Contact/>
       </main>
     </>

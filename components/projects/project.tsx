@@ -1,7 +1,7 @@
 import React, {RefObject,useRef, useState,useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Iphone from '../../public/iphone.png';
+import Iphone from '../../public/iphone.webp';
 import {ProjectWrapper} from './project-style';
 
 type ProjectProps = {
@@ -29,9 +29,6 @@ export const Project:React.FC<ProjectProps>=({imageSrc,imageAlt,projectName,role
     
         useEffect(()=>{
         const observer =  new IntersectionObserver(callbackFunction)
-        console.log(observer)
-        console.log(containerRef.current)
-        console.log(isVisible)
         if(containerRef.current){
           observer.observe(containerRef?.current)
           console.log(containerRef?.current)
