@@ -28,14 +28,13 @@ export const Nav:React.FC<props>=({handleClick,setOpen,open})=>{
                 <AiOutlineMenu/>
             </button>
                 <ul className={`${isOpen?'show':'hide'}`} >
-                    <a className='link' onClick={handleClick}>About</a>
+                    <button onClick={()=>setIsOpen(!isOpen)} className='closed'><AiOutlineClose/></button>
+                    <a className='link' onClick={handleClick} >About</a>
                     <a className='link'  onClick={handleClick}>Projects</a>
+                    <a className='link' onClick={handleClick}>Contact</a>
                     
-                    <div >
-                        <button onClick={()=>setIsOpen(!isOpen)} className='closed'><AiOutlineClose/></button>
-                    </div>
+                    
                 </ul>
-            
         </MobileNav>
         </>
     )

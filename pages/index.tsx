@@ -27,7 +27,7 @@ export default function Home() {
   
   const project = useRef<HTMLDivElement>(null);
   const about = useRef<HTMLDivElement>(null);
-  const reviews = useRef<HTMLDivElement>(null);
+
 
   const [open, setOpen] = useState(false);
 
@@ -36,8 +36,10 @@ export default function Home() {
     setOpen(!open)
     const target = e.target as Element;
     if(target.innerHTML=='Projects')project.current?.scrollIntoView({behavior: 'smooth'});
+    
+    // Contact and about lead to same area
     if(target.innerHTML=='About')about.current?.scrollIntoView({behavior: 'smooth'});
-    if(target.innerHTML=='Reviews')reviews.current?.scrollIntoView({behavior: 'smooth'});
+    if(target.innerHTML=='Contact')about.current?.scrollIntoView({behavior: 'smooth'});
 
   };
   
