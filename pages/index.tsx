@@ -30,10 +30,10 @@ export default function Home() {
 
 
   const [open, setOpen] = useState(false);
+  const [mobile,isMobile] = useState(false);
 
 
   const handleClick = (e:React.MouseEvent<Element,MouseEvent>) => {
-    setOpen(!open)
     const target = e.target as Element;
     if(target.innerHTML=='Projects')project.current?.scrollIntoView({behavior: 'smooth'});
     
@@ -51,7 +51,7 @@ export default function Home() {
       </Head>
       <main >
       <GlobalStyles />
-      <Nav open={open} setOpen={()=>setOpen(!open)} pageName='Home' handleClick={handleClick}/>
+      <Nav open={open} setOpen={()=>setOpen(!open)} pageName='Home' handleClick={handleClick} />
           <Project 
             projectName="Francisco Zermeño" 
             imageSrc={prod.src}

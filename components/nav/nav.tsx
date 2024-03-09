@@ -6,11 +6,11 @@ type props = {
     pageName?:string;
     handleClick?:(event: React.MouseEvent<HTMLAnchorElement>) => void;
     open?:boolean;
-    setOpen?:React.Dispatch<React.SetStateAction<boolean>>
+    setOpen?:React.Dispatch<React.SetStateAction<boolean>>;
+
 }
 
 export const Nav:React.FC<props>=({handleClick,setOpen,open})=>{
-    const [isOpen,setIsOpen]=useState(false);
     return(
         <>
         <Navbar>
@@ -24,14 +24,14 @@ export const Nav:React.FC<props>=({handleClick,setOpen,open})=>{
             </div>
         </Navbar>
         <MobileNav>
-            <button onClick={()=>setIsOpen(!isOpen)}>
+            <button onClick={()=>setOpen?.(!open)}>
                 <AiOutlineMenu/>
             </button>
-                <ul className={`${isOpen?'show':'hide'}`} >
-                    <button onClick={()=>setIsOpen(!isOpen)} className='closed'><AiOutlineClose/></button>
-                    <a className='link' onClick={handleClick} >About</a>
-                    <a className='link'  onClick={handleClick}>Projects</a>
-                    <a className='link' onClick={handleClick}>Contact</a>
+                <ul className={`${open?'show':'hide'}`} >
+                    <button onClick={()=>setOpen?.(!open)} className='closed'><AiOutlineClose/></button>
+                    <a className='link' onClick={(event)=>{handleClick && handleClick(event); setOpen && setOpen?.(!open)}} >About</a>
+                    <a className='link'  onClick={(event)=>{handleClick && handleClick(event); setOpen && setOpen?.(!open)}}>Projects</a>
+                    <a className='link' onClick={(event)=>{handleClick && handleClick(event); setOpen && setOpen?.(!open)}}>Contact</a>
                     
                     
                 </ul>
