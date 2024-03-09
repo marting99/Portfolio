@@ -31,7 +31,6 @@ export const Project:React.FC<ProjectProps>=({imageSrc,imageAlt,projectName,role
         const observer =  new IntersectionObserver(callbackFunction)
         if(containerRef.current){
           observer.observe(containerRef?.current)
-          console.log(containerRef?.current)
         }
         // if we want to have it always transitioning if the div is in view then we remove observer.disconnect
         // we disconnect to stop the api calls
