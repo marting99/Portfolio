@@ -46,11 +46,16 @@ export const MobileNav = styled.div`
         display:flex;
         overflow:auto;
         color:white;
+        background-color:black;
+        position:fixed;
+        width:100%;
+        z-index:10;
         .hide{
             transform: translateX(-100%);
             transition:all .5s ease-out;
         }
         ul{
+            font-size:25px;
             margin:0;
             padding:0;
             display:flex;
@@ -58,7 +63,7 @@ export const MobileNav = styled.div`
             flex-direction:column;
             align-items:center;
             list-style:none;
-            background-color:#202E2C;
+            background-color:black;
             height:100%;
             width:80%;
             overflow-x:hidden;
@@ -68,22 +73,32 @@ export const MobileNav = styled.div`
             right:25px;
             top:0;
         }
+        ul a:hover{
+            cursor:pointer;
+        }
         .show{
             transform: translateX(-3%);
             transition:all .7s ease-out;
         }
         .closed{
-            background-color:#202E2C;
+            background-color:black;
             color:white;
+            position: absolute;
+            top:10px;
+            right:10px;
         }
         ul .link{
             margin:40px 0px;
         }
         button{
             display:flex;
-            color:#202E2C;
+            color:white;
             border:none;
+            background-color:black;
             font-size:32px;
+        }
+        button:hover{
+            cursor:pointer;
         }
     }
 `;
