@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     max-width:100%;
+    // background:black;
     overflow-x:hidden;
     height:100%;
   }

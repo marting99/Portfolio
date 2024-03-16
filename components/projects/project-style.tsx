@@ -126,13 +126,16 @@ border-bottom:1px solid #333;
         margin-bottom:5%;
         max-width:80%;
     }
+    .nextImg{
+        object-fit:fill;
+      }
     .desktop {
-        height: 320px;
-        max-width:550px;
+        height: 240px;
+        max-width:400px;
     }
     .right{
-        width:80%;
-        height:350px;
+        width:95%;
+        height:300px;
     }
     .phone{
         display:none;
