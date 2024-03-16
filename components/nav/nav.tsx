@@ -18,8 +18,8 @@ export const Nav:React.FC<props>=({handleClick,setOpen,open})=>{
                 <h1>Martín Garcia</h1>
             </div>
             <div className="content">
-                <a  onClick={handleClick}>Projects</a>
-                <a onClick={handleClick}>About</a>
+                 <a onClick={handleClick}>About</a>
+                 <a  onClick={handleClick}>Projects</a>
                 <a onClick={handleClick}>Contact</a>
 
             </div>
