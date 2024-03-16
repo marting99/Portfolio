@@ -52,6 +52,12 @@ export default function Home() {
       <main >
       <GlobalStyles />
       <Nav open={open} setOpen={()=>setOpen(!open)} pageName='Home' handleClick={handleClick} />
+        <About 
+        about={about}
+        img = {imgMe.src}
+        imgAlt = "A picture of myself sitting down with a hawaiin shirt" 
+        description="Hello! My name is Martin Garcia. I recently earned my A.S. from Chabot Community College and I am currently a Junior at Cal State East Bay, pursuing my Bachelor's degree in Computer Science. I enjoy the versatility that the field offers; I often find myself dabbling in various areas such as website development, data cleaning/collecting, and game development. Computer science grants me the freedom to explore these diverse interests. I take great pleasure in conceptualizing an idea and bringing it to life, knowing that it can be utilized by my friends and family. Below you can find some of my professional work at a start up company in the bay area as well as freelance work and some personal projects. Feel free to reach out!"/>
+        
           <Project 
             projectName="Francisco Zermeño" 
             imageSrc={prod.src}
@@ -72,28 +78,13 @@ export default function Home() {
             projectDesc="I created a clean and user-friendly website for a hairstylist to showcase her services, customer reviews, and provide a booking form for clients. The website features a modern design with a focus on simplicity and ease of use for her clients."
           />
           <Project 
-            projectName="Smoakland" 
-            imageSrc={Smoakland.src}
-            mobileImg={smkPhone.src} 
-            role={'Full Stack Developer '}
-            date={'(Jan 2021 - May 2022)'} 
-            projectLink="https://www.smoakland.com/dispensary-weed-delivery"
-            projectDesc=" I collaborated closely with the marketing team to create a template for blogs and locations we deliver to using React and a headless CMS. This approach helped our marketing team to create and publish blogs easily."
-          />
-          <Project 
             projectName="Bombastic Reading" 
             imageSrc={bombastic.src} 
             role={'Chrome extension'}
             projectLink="https://chromewebstore.google.com/detail/bombastic-reading/mlpgmjfnkcndmkeoobelnbgnabfpggek?pli=1"
-            projectDesc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et impedit reprehenderit sit dolorem totam optio commodi velit corporis! Vitae vel quasi fuga iusto quis aliquid, libero iure veritatis saepe. Neque."
+            projectDesc="Developed a Chrome extension that enhances the user's reading speed, particularly beneficial for quickly skimming through articles or blogs. The extension highlights a portion of the text by making it bold and increasing the font size. Implementation involved the use of a hashmap for quick reverting back to the original text."
           />
-          
-        <About 
-        about={about}
-        img = {imgMe.src}
-        imgAlt = "A picture of myself sitting down with a hawaiin shirt" 
-        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et impedit reprehenderit sit dolorem totam optio commodi velit corporis! Vitae vel quasi fuga iusto quis aliquid, libero iure veritatis saepe. Neque."/>
-        <Contact/>
+          <Contact/>
       </main>
     </>
   )

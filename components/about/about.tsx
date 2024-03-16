@@ -18,7 +18,7 @@ padding: 100px 0px;
 flex-direction:column;
 padding: 50px 0px;
 margin: 0px 50px;
-
+border-bottom:1px solid #333;
 .content{
     width:100%;
     display:flex;
