@@ -13,11 +13,11 @@ interface IDivPosition {
 const AboutWrapper = styled.div`
 display:flex;
 justify-content:space-between;
-margin:0 50px;
 padding: 100px 0px;
 flex-direction:column;
 padding: 50px 0px;
-margin: 0px 50px;
+margin-right:50px;
+margin-left:35px;
 border-bottom:1px solid #333;
 .content{
     width:100%;
@@ -65,11 +65,12 @@ border-bottom:1px solid #333;
         padding:0;
 
     }
+    .image{
+        width:250px;
+        height:250px;
+    }
     .left{
         padding-left:0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         margin-bottom:50px;
       }
