@@ -52,7 +52,7 @@ export const MobileNav = styled.div`
         height:55px;
         z-index:10;
         .title{
-            width:85%;
+            width:80%;
             display:flex;
             align-items:center;
             justify-content:center;
@@ -103,6 +103,7 @@ export const MobileNav = styled.div`
             border:none;
             background-color:black;
             font-size:32px;
+            padding:0 0 0 12px;
             align-items:center;
         }
         button:hover{
