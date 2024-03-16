@@ -56,7 +56,16 @@ export default function Home() {
         img = {imgMe.src}
         imgAlt = "A picture of myself sitting down with a hawaiin shirt" 
         description="Hello! My name is Martin Garcia. I recently earned my A.S. from Chabot Community College and I am currently a Junior at Cal State East Bay, pursuing my Bachelor's degree in Computer Science. I enjoy the versatility that the field offers; I often find myself dabbling in various areas such as website development, data cleaning/collecting, and game development. Computer science grants me the freedom to explore these diverse interests. I take great pleasure in conceptualizing an idea and bringing it to life, knowing that it can be utilized by my friends and family. Below you can find some of my professional work at a start up company in the bay area as well as freelance work and some personal projects. Feel free to reach out!"/>
-        
+          <Project
+            projectName='Smoakland'
+            imageSrc={Smoakland.src}
+            mobileImg={smkPhone.src}
+            role={"Full Stack Developer"}
+            date='Jan 2021 - May 2022'
+            projectDesc='I collaborated closely with the marketing team to create templates showcasing the delivery locations available to our users. I integrated these templates with a Content Management System (CMS) to streamline the content generation process for our marketing team, enabling them to produce content efficiently. The templates were designed to comply with SEO best practices, enhancing our website &apos;s visibility in search engine results.'
+            project={project}
+            projectLink='https://www.smoakland.com/dispensary-weed-delivery'
+            /> 
           <Project 
             projectName="Francisco Zermeño" 
             imageSrc={prod.src}
@@ -64,7 +73,6 @@ export default function Home() {
             role={'contract'}
             date={'(May 2022 - June 2022)'} 
             projectDesc="I worked with Mr.Zermeño to redesign and develop his website, making it mobile responsive, userfriendly, and including a custom blog built with a headless CMS."
-            project={project}
             projectLink="https://xn--zermeo-0wa.info"
           />
           <Project 
