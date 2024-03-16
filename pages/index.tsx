@@ -12,7 +12,7 @@ import CatGorePhone from 'public/catgorephone.webp';
 import Smoakland from 'public/smoakland.webp';
 import smkPhone from 'public/smoakland-phone.webp';
 import bombastic from 'public/bombasticReading.webp';
-import Contact from '@/components/contact/contact';
+import {Contact} from '@/components/contact/contact';
 const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Graphik', sans-serif;
@@ -27,7 +27,7 @@ export default function Home() {
   
   const project = useRef<HTMLDivElement>(null);
   const about = useRef<HTMLDivElement>(null);
-
+  const contact= useRef<HTMLDivElement>(null);
 
   const [open, setOpen] = useState(false);
   const [mobile,isMobile] = useState(false);
@@ -36,10 +36,8 @@ export default function Home() {
   const handleClick = (e:React.MouseEvent<Element,MouseEvent>) => {
     const target = e.target as Element;
     if(target.innerHTML=='Projects')project.current?.scrollIntoView({behavior: 'smooth'});
-    
-    // Contact and about lead to same area
     if(target.innerHTML=='About')about.current?.scrollIntoView({behavior: 'smooth'});
-    if(target.innerHTML=='Contact')about.current?.scrollIntoView({behavior: 'smooth'});
+    if(target.innerHTML=='Contact')contact.current?.scrollIntoView({behavior: 'smooth'});
 
   };
   
@@ -84,7 +82,7 @@ export default function Home() {
             projectLink="https://chromewebstore.google.com/detail/bombastic-reading/mlpgmjfnkcndmkeoobelnbgnabfpggek?pli=1"
             projectDesc="Developed a Chrome extension that enhances the user's reading speed, particularly beneficial for quickly skimming through articles or blogs. The extension highlights a portion of the text by making it bold and increasing the font size. Implementation involved the use of a hashmap for quick reverting back to the original text."
           />
-          <Contact/>
+          <Contact contact={contact}/>
       </main>
     </>
   )

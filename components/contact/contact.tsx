@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { RefObject } from 'react'
 import { Main} from './contact-style';
 import Link from 'next/link';
 import {AiFillGithub,AiFillLinkedin} from 'react-icons/ai';
-export default function Contact(){
+interface IDivePosition{
+    contact:RefObject<HTMLDivElement>|null;
+}
+export const Contact:React.FC<IDivePosition>=({contact})=>{
     return (
         <>
-            <Main>
+            <Main ref={contact}>
                 <div className="other-contact">
                     <div className="github">
                         <Link href="https://github.com/marting99" target="_blank" passHref>
