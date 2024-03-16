@@ -59,6 +59,11 @@ border-bottom:1px solid #333;
   .right p {
       margin:0px;
   }
+@media(max-width:750px){
+    .left{
+        width:66%;
+    }
+}
   @media(max-width:1100px){
     .right{
         width:100%;
@@ -71,7 +76,7 @@ border-bottom:1px solid #333;
     }
     .left{
         padding-left:0;
-        width: 100%;
+        // width: 100%;
         margin-bottom:50px;
       }
     .content{
