@@ -49,7 +49,14 @@ export const MobileNav = styled.div`
         background-color:black;
         position:fixed;
         width:100%;
+        height:55px;
         z-index:10;
+        .title{
+            width:80%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
         .hide{
             transform: translateX(-100%);
             transition:all .5s ease-out;
@@ -96,6 +103,8 @@ export const MobileNav = styled.div`
             border:none;
             background-color:black;
             font-size:32px;
+            padding:0 0 0 12px;
+            align-items:center;
         }
         button:hover{
             cursor:pointer;
