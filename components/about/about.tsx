@@ -63,6 +63,9 @@ border-bottom:1px solid #333;
     .left{
         width:auto;
     }
+    .content{
+        align-items:start;
+    }
 }
   @media(max-width:1100px){
     .right{
