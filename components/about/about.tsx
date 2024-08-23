@@ -61,7 +61,7 @@ border-bottom:1px solid #333;
   }
 @media(max-width:750px){
     .left{
-        width:66%;
+        width:auto;
     }
 }
   @media(max-width:1100px){
