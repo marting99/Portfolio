@@ -86,7 +86,7 @@ border-bottom:1px solid #333;
         
         flex-direction:column;
         justify-content:center;
-        align-items:center;
+        align-items:start;
         margin: 0 25px;
     }
 
