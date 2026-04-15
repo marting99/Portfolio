@@ -29,7 +29,7 @@ export default function Home() {
   const project = useRef<HTMLDivElement>(null);
   const about = useRef<HTMLDivElement>(null);
   const contact= useRef<HTMLDivElement>(null);
-  const aboutDescription = "Hello! My name is Martin Garcia. I am a graduated from Cal State East Bay with a bachelor's degree in computer science. I enjoy building software that solves real world problems. I am currently working on a passion project where users are able to track, log, and learn interesting insights on their cars maintenance expenses. The current tech stack for this passion project is: React, Next.js and Supabase. When I'm not grinding Leetcode or going down the rabbit hole of weather or not A.I. will replace junior software engineers. You can find me at gym, playing chess, or working on my 1993 Mazda Miata. Below you can find some of my projects as well as my freelance work. Feel free to reach out! "
+  const aboutDescription = "Hello! My name is Martin Garcia. I graduated from Cal State East Bay with a bachelor's degree in computer science. I enjoy building software that solves real-world problems. I am currently working on a passion project where users can track, log, and gain interesting insights into their car maintenance expenses. The current tech stack for this passion project is: React, Next.js, and Supabase. When I'm not grinding Leetcode or going down the rabbit hole of whether A.I. will replace junior software engineers. You can find me at the gym, playing chess, or working on my 1993 Mazda Miata. Below you can find some of my projects as well as my freelance work. Feel free to reach out! "
   const [open, setOpen] = useState(false);
   const [mobile,isMobile] = useState(false);
 
