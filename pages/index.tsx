@@ -29,7 +29,7 @@ export default function Home() {
   const project = useRef<HTMLDivElement>(null);
   const about = useRef<HTMLDivElement>(null);
   const contact= useRef<HTMLDivElement>(null);
-
+  const aboutDescription = "Hello! My name is Martin Garcia. I am a graduated from Cal State East Bay with a bachelor's degree in computer science. I enjoy building software that solves real world problems. I am currently working on a passion project where users are able to track, log, and learn interesting insights on their cars maintenance expenses. The current tech stack for this passion project is: React, Next.js and Supabase. When I'm not grinding Leetcode or going down the rabbit hole of weather or not A.I. will replace junior software engineers. You can find me at gym, playing chess, or working on my 1993 Mazda Miata. Below you can find some of my projects as well as my freelance work. Feel free to reach out! "
   const [open, setOpen] = useState(false);
   const [mobile,isMobile] = useState(false);
 
@@ -55,7 +55,7 @@ export default function Home() {
         about={about}
         img = {imgMe.src}
         imgAlt = "A picture of myself sitting down with a hawaiin shirt" 
-        description="Hello! My name is Martin Garcia. I recently earned my A.S. from Chabot Community College and I am currently a Junior at Cal State East Bay, pursuing my Bachelor's degree in Computer Science. I enjoy the versatility that the field offers; I often find myself dabbling in various areas such as website development, data cleaning/collecting, and game development. Computer science grants me the freedom to explore these diverse interests. I take great pleasure in conceptualizing an idea and bringing it to life, knowing that it can be utilized by my friends and family. Below you can find some of my professional work at a start up company in the bay area as well as freelance work and some personal projects. Feel free to reach out!"/>
+        description={aboutDescription}/>
           <Project
             projectName='Smoakland'
             imageSrc={Smoakland.src}
